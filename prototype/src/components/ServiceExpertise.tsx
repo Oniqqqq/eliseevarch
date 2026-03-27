@@ -39,17 +39,18 @@ export default function ServiceExpertise() {
 
         <div className="lg:col-span-6 flex flex-col items-center justify-center text-center space-y-2 md:space-y-4 order-1 lg:order-2">
           {words.map((word, i) => (
-            <motion.div 
+            <motion.a
               key={word}
+              href="#"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: i === 2 ? 1 : 0.2, y: 0 }}
               viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 1, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className={`text-4xl md:text-6xl lg:text-[5.5rem] font-medium uppercase tracking-tight leading-[1.05] 
-                ${i === 2 ? 'text-foreground' : 'text-foreground hover:opacity-100 transition-opacity duration-500 cursor-pointer'}`}
+              className={`text-4xl md:text-6xl lg:text-[5.5rem] font-medium uppercase tracking-tight leading-[1.05] block
+                ${i === 2 ? 'text-foreground hover:opacity-100 transition-opacity duration-500 cursor-pointer pointer-events-auto target-link' : 'text-foreground hover:opacity-100 transition-opacity duration-500 cursor-pointer pointer-events-auto'}`}
             >
               {word}
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 

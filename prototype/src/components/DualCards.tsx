@@ -6,12 +6,13 @@ export default function DualCards() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[70vh] md:h-[80vh]">
         
         {/* Portfolio Card */}
-        <motion.div 
+        <motion.a
+          href="#"
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative group overflow-hidden cursor-pointer rounded-sm bg-neutral-900"
+          className="relative group overflow-hidden cursor-pointer rounded-sm bg-neutral-900 block"
         >
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 z-10" />
           <motion.video 
@@ -28,15 +29,16 @@ export default function DualCards() {
             <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase mb-2">Портфолио</h3>
             <p className="text-xs tracking-widest uppercase opacity-80 transform transition-all duration-700 group-hover:opacity-100 group-hover:tracking-[0.2em]">Наши любимые проекты</p>
           </div>
-        </motion.div>
+        </motion.a>
 
         {/* Philosophy Card */}
-        <motion.div 
+        <motion.a
+          href="#"
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative group overflow-hidden cursor-pointer rounded-sm bg-neutral-900"
+          className="relative group overflow-hidden cursor-pointer rounded-sm bg-neutral-900 block"
         >
           <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-700 z-10" />
           <motion.video 
@@ -53,7 +55,7 @@ export default function DualCards() {
             <h3 className="text-3xl md:text-5xl font-medium tracking-tight uppercase mb-2">Философия</h3>
             <p className="text-xs tracking-widest uppercase opacity-80 transform transition-all duration-700 group-hover:opacity-100 group-hover:tracking-[0.2em]">Больше, чем архитектура</p>
           </div>
-        </motion.div>
+        </motion.a>
 
       </div>
 

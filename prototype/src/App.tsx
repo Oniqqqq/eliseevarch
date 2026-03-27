@@ -13,6 +13,7 @@ import DualCards from './components/DualCards';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import ReconstructionNotice from './components/ReconstructionNotice';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -64,6 +65,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <ReconstructionNotice />
     </>
   )
 }
